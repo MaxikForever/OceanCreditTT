@@ -9,9 +9,11 @@ export class UserService {
   private userSubject: BehaviorSubject<User | null>;
 
   constructor() {
-    // Attempt to load user data from localStorage on service initialization
-    const storedUserData = localStorage.getItem('user');
-    const userData = storedUserData ? JSON.parse(storedUserData) : null;
+    let userData = null;
+    if (typeof localStorage !== 'undefined') {
+      const storedUserData = localStorage.getItem('user');
+      userData = storedUserData ? JSON.parse(storedUserData) : null;
+    }
     this.userSubject = new BehaviorSubject<User | null>(userData);
   }
 

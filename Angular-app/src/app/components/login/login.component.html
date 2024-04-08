@@ -1,39 +1,38 @@
-<form [formGroup]="loginForm">
-    <p-card header="Login" [style]="{width: '360px'}">
-        <div class="field">
-            <label for="email">Email</label>
-            <input 
-            type="text"
-             pInputText 
-             formControlName="email"
-             class="w-full"
-             name="email"
-             placeholder="Type your email" 
-             />
-             <small *ngIf="email.invalid && (email.dirty || email.touched)"  class="block p-error">
-                <div *ngIf="email.errors?.['required']">Email is required</div>
-                <div *ngIf="email.errors?.['email']">Email should be valid</div>
-             </small>
-        </div>
+<div class="grid-root">
+    <div class="background-image">
+        <img src="https://m6v3l9.github.io/react-material-admin/img/startup.svg" alt=""
+            style="max-width: 100%; max-height: 100%;">
+    </div>
 
-        <div class="field">
-            <label for="password">Password</label>
-            <input 
-            type="text"
-             pInputText 
-             formControlName="password"
-             class="w-full"
-             name="password"
-             placeholder="Type your password" 
-             />
-             <small *ngIf="password.invalid && (password.dirty || password.touched)"  class="block p-error">
-                <div *ngIf="password.errors?.['required']">password is required</div>
-             </small>
-        </div>
+    <div class="form-container">
+        <form [formGroup]="loginForm">
+            <p-card header="Sign In" position="top-center" [style]="{width: '360px', 'text-align': 'center'}">
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="text" pInputText formControlName="email" class="w-full" name="email"
+                        placeholder="Type your email" />
+                    <small *ngIf="email.invalid && (email.dirty || email.touched)" class="block p-error">
+                        <div *ngIf="email.errors?.['required']">Email is required</div>
+                        <div *ngIf="email.errors?.['email']">Email should be valid</div>
+                    </small>
+                </div>
 
-        <p-button label="SIGN IN" styleClass="w-full" [disabled]="loginForm.invalid" (onClick)="redirectToHome()"></p-button>
-        <div class="mt-2">
-            Not a member ? <a routerLink="/register">Register</a>
-        </div>
-    </p-card>
-</form>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="text" pInputText formControlName="password" class="w-full" name="password"
+                        placeholder="Type your password" />
+                    <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+                        <div *ngIf="password.errors?.['required']">password is required</div>
+                    </small>
+                </div>
+
+                <p-button label="SIGN IN" styleClass="w-full" [disabled]="loginForm.invalid"
+                    (onClick)="redirectToHome()"></p-button>
+                <div class="mt-2">
+                    Not a member ? <a routerLink="/register">Register</a>
+                </div>
+            </p-card>
+        </form>
+    </div>
+
+</div>
