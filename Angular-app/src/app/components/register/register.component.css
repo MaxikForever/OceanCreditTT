@@ -1,0 +1,11 @@
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+.centered-text-button {
+    display: flex; /* Make the anchor behave like a flex container */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    text-align: center; /* Center the text for good measure, although flex should take care of it */
+    font-size: 1rem;
+}

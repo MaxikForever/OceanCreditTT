@@ -1,0 +1,59 @@
+<form [formGroup]="registerForm" (ngSubmit)="submitDetails()">
+    <p-card header="Register" [style]="{width: '360px'}">
+
+        <div class="field">
+            <label for="lastName">LastName</label>
+            <input 
+            type="text"
+             pInputText 
+             formControlName="lastName"
+             class="w-full"
+             name="lastName"
+             placeholder="Last Name*" 
+             />
+             <small *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"  class="block p-error">
+                <div *ngIf="lastName.errors?.['required']">lastName is required</div>
+                <div *ngIf="lastName.errors?.['pattern']">Enter a valid Name</div>
+             </small>
+        </div>
+
+        <div class="field">
+            <label for="firstName">FirstName</label>
+            <input 
+            type="text"
+             pInputText 
+             formControlName="firstName"
+             class="w-full"
+             name="firstName"
+             placeholder="First Name*" 
+             />
+             <small *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"  class="block p-error">
+                <div *ngIf="firstName.errors?.['required']">firstName is required</div>
+             </small>
+        </div>
+
+        
+        <div class="field">
+            <label for="email">Email</label>
+            <input 
+            type="text"
+             pInputText 
+             formControlName="email"
+             class="w-full"
+             name="email"
+             placeholder="Type your email" 
+             />
+             <small *ngIf="email.invalid && (email.dirty || email.touched)"  class="block p-error">
+                <div *ngIf="email.errors?.['required']">Email is required</div>
+                <div *ngIf="email.errors?.['email']">Email should be valid</div>
+             </small>
+        </div>
+
+      
+
+        <p-button label="Register" styleClass="w-full" [disabled]="registerForm.invalid" type="submit"></p-button>
+        <div class="flex justify-content-center mt-3" >
+         <a routerLink="/login" rel="noopener noreferrer" class="p-button font-bold w-full text-decoration-none centered-text-button" >Back to login</a>
+        </div>
+    </p-card>
+</form>
