@@ -1,7 +1,62 @@
-<form [formGroup]="registerForm" (ngSubmit)="submitDetails()">
-    <p-card header="Register" [style]="{width: '360px'}">
+<!-- <p-card header="Register" [style]="{width: '360px'}"> -->
+<mat-card class="card-class">
+    <mat-card-header>
+        <mat-card-title class="flex justify-content-center">
+        <svg id="logo" mat-card-sm-image xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 24 24"
+            style="fill: none; stroke: currentcolor; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round;">
+            <path d="m 6,7 6,10"></path>
+            <path d="M 18,7 V 7"></path>
+        </svg>
+      </mat-card-title>
+        <mat-card-subtitle class="sub-title">Register</mat-card-subtitle>
+    </mat-card-header>
 
-        <div class="field">
+
+    <mat-card-content  [style.width.%]=100>
+        <form class="flex flex-column justify-content-center" [formGroup]="registerForm" (ngSubmit)="submitDetails()">
+
+            <mat-form-field appearance="outline" class="mt-3"  [style.width.px]=400>
+                <mat-label>Last Name *</mat-label>
+                <input type="text" matInput>
+
+                <mat-error *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+                   Required
+                </mat-error>
+
+            </mat-form-field >
+
+            <mat-form-field appearance="outline" [style.width.px]=400>
+                <mat-label>First *</mat-label>
+                <input type="text"  matInput>
+
+                <mat-error *ngIf="firstName.invalid && (lastName.dirty || lastName.touched)">
+                    Required
+                </mat-error>
+
+            </mat-form-field >
+
+            <mat-label class="gender">Gender</mat-label>
+            <mat-radio-group aria-label="Select an option">
+                
+                <mat-radio-button value="F">F</mat-radio-button>
+                <mat-radio-button value="M">M</mat-radio-button>
+                <mat-radio-button value="NC">NC</mat-radio-button>
+
+              </mat-radio-group>
+
+
+            <mat-form-field appearance="outline" [style.width.px]=400>
+                <mat-label>Email *</mat-label>
+                <input type="email" matInput>
+
+                <mat-error *ngIf="email.invalid && (lastName.dirty || lastName.touched)">
+                    Required
+                </mat-error>
+
+            </mat-form-field >
+
+
+            <!-- <div class="field">
             <label for="lastName">LastName</label>
             <input 
             type="text"
@@ -13,7 +68,7 @@
              />
              <small *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"  class="block p-error">
                 <div *ngIf="lastName.errors?.['required']">lastName is required</div>
-                <div *ngIf="lastName.errors?.['pattern']">Enter a valid Name</div>
+                
              </small>
         </div>
 
@@ -47,13 +102,22 @@
                 <div *ngIf="email.errors?.['required']">Email is required</div>
                 <div *ngIf="email.errors?.['email']">Email should be valid</div>
              </small>
-        </div>
+        </div> -->
 
-      
 
-        <p-button label="Register" styleClass="w-full" [disabled]="registerForm.invalid" type="submit"></p-button>
-        <div class="flex justify-content-center mt-3" >
+
+            <!-- <p-button label="Register" styleClass="w-full" [disabled]="registerForm.invalid" type="submit"></p-button> -->
+            <!-- making this button use material UI -->
+
+            <mat-card-actions class="flex-column">
+                <button mat-flat-button color="primary">Register</button>
+                <a routerLink="/login" mat-flat-button>Back to login</a>
+            </mat-card-actions>
+
+            <!-- <div class="flex justify-content-center mt-3" >
          <a routerLink="/login" rel="noopener noreferrer" class="p-button font-bold w-full text-decoration-none centered-text-button" >Back to login</a>
-        </div>
-    </p-card>
-</form>
+        </div> -->
+        </form>
+    </mat-card-content>
+
+</mat-card>

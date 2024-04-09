@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
+:root {
+    --blue-color: hsl(224, 100%, 58%) !important;
+}
+
 html,
 body {
     font-family: "Nunito", sans-serif !important;
@@ -10,3 +14,37 @@ body {
     margin: 0;
 }
 
+
+/* form-fields-border-radius */
+.mdc-text-field--outlined {
+    --mdc-outlined-text-field-container-shape: 16px !important;
+  }
+
+.mdc-radio {
+    --mdc-radio-selected-hover-icon-color: hsl(224, 100%, 58%) !important;
+
+}
+
+/* Override for the unselected state */
+.mdc-radio .mdc-radio__outer-circle,
+.mdc-radio .mdc-radio__inner-circle {
+    border-color:  hsl(224, 100%, 58%) !important; /* Adjust the 'blue' to your specific shade if necessary */
+}
+
+
+
+
+/* It might be necessary to target the native input element for certain states */
+.mdc-radio input[type="radio"]:checked + .mdc-radio__background .mdc-radio__inner-circle {
+    background-color:  hsl(224, 100%, 58%) !important; /* For selected state */
+}
+
+.mdc-radio input[type="radio"]:not(:checked):hover + .mdc-radio__background .mdc-radio__outer-circle {
+    border-color: rgb(69, 90, 100) !important; /* For hover on unselected state */
+}
+
+/* For focus states, often outlined with a ripple effect */
+.mdc-radio .mdc-radio__ripple::before, 
+.mdc-radio .mdc-radio__ripple::after {
+    background-color:rgb(69, 90, 100) !important; /* This targets the ripple effect */
+}

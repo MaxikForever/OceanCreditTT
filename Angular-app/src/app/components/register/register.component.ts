@@ -8,7 +8,7 @@ import { UserService } from '../../services/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrl: './register.component.css',
 })
 
 export class RegisterComponent {
@@ -20,11 +20,11 @@ export class RegisterComponent {
     private messageService: MessageService,
     private router: Router,
     private UserService: UserService
-  ){
+  ) {
     this.registerForm = this.fb.group(
       {
-        lastName: ['', [Validators.required, Validators.pattern(/^[A-Za-z][A-Za-z-\s]+$/)]],
-        firstName: ['', [Validators.required, Validators.pattern(/^[A-Za-z][A-Za-z-\s]+$/)]],
+        lastName: ['', [Validators.required]],
+        firstName: ['', [Validators.required]],
         email: ['', [Validators.required, Validators.email]],
       }
     )
@@ -44,11 +44,11 @@ export class RegisterComponent {
 
 
   submitDetails() {
-    const posData = {...this.registerForm.value};
+    const posData = { ...this.registerForm.value };
 
     const userData: User = {
       firstName: posData.firstName,
-      lastName:  posData.lastName,
+      lastName: posData.lastName,
       email: posData.email
     };
 
