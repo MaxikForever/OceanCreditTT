@@ -1,0 +1,47 @@
+:root {
+    --radio-unselected-hover-border-color: rgb(69, 90, 100);
+    --radio-selected-color: hsl(224, 100%, 58%);
+  }
+
+/* form-fields-border-radius */
+.mdc-text-field--outlined {
+  --mdc-outlined-text-field-container-shape: 16px !important;
+}
+
+/* radio  */
+
+/* Unselected Radio - Hover State */
+.mdc-radio input[type="radio"]:not(:checked):hover + .mdc-radio__background .mdc-radio__outer-circle {
+    border-color: var(--radio-unselected-hover-border-color) !important;
+  }
+  
+  /* Unselected and Selected Radio - Default State */
+  .mdc-radio .mdc-radio__outer-circle {
+    border-color: var(--radio-unselected-hover-border-color) !important;
+  }
+  
+  .mdc-radio input[type="radio"]:checked + .mdc-radio__background .mdc-radio__outer-circle {
+    border-color: var(--radio-selected-color) !important;
+  }
+  
+  /* Selected Radio - Inner Circle Color (Using a CSS variable for the component) */
+  .mdc-radio {
+    --mdc-radio-selected-icon-color: var(--radio-selected-color) !important;
+  }
+  
+  .mdc-radio input[type="radio"]:checked:hover + .mdc-radio__background .mdc-radio__inner-circle {
+    border-color: var(--radio-selected-color) !important /* Replace 'yourHoverBorderColor' with the desired color */
+}
+
+
+
+/* buttons */
+
+  .mat-mdc-unelevated-button.mat-primary {
+    --mdc-filled-button-container-color:  var(--radio-selected-color) !important
+}
+
+.mdc-button {
+    --mdc-shape-small: 20px !important; /* Adjust the value as needed */
+  }
+
