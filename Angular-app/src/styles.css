@@ -33,15 +33,18 @@ body {
     user-select: none;
     transition: background-color 0.3s;
     max-width: 400px;
-    width: 100%;
+    width: 107%;
     font-weight: 700;
   }
 
   .custom-button:hover {
     background-color:var(--blue-accent-color);
+}
 
+.custom-button span {
+    font-size: 0.875rem;
+    line-height: 1.75;
   }
-
 
 
   .custom-link-button {

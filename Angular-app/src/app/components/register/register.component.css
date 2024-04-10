@@ -25,17 +25,19 @@
   font-size: 1rem;
 }
 
-.custom-button span {
-  font-size: 0.875rem;
-  line-height: 1.75;
-}
 
 .settings-icon {
   height: 44px;
   width: 44px;
   fill: hsl(0, 0%, 46%);
-  position: absolute; /* or 'fixed', depending on your needs */
-  top: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  padding: 10px; /* Gives some space from the corners */
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+  padding: 10px; 
 }
+
+@media (max-width: 460px) {
+    mat-form-field {
+      width: 300px !important;
+    }
+  }

@@ -12,8 +12,8 @@ import { UserService } from '../../services/auth.service';
 })
 
 export class RegisterComponent {
-
   registerForm: FormGroup;
+  submitted = false;
 
   constructor(
     private fb: FormBuilder,
@@ -44,6 +44,12 @@ export class RegisterComponent {
 
 
   submitDetails() {
+
+   this.submitted = true;
+
+    if (this.registerForm.invalid) {
+      return;
+    }
     const posData = { ...this.registerForm.value };
 
     const userData: User = {
