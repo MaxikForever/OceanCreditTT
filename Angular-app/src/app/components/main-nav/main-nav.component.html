@@ -1,0 +1,64 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item href="#">
+          <mat-icon>home</mat-icon> Home</a>
+        <a mat-list-item href="#">
+          <mat-icon aria-label="material-symbols-outlined">
+            bar_chart_4_bars
+            </mat-icon>
+          Dashboard</a>
+        <a mat-list-item href="#">
+          <mat-icon aria-label="material-symbols-outlined">
+            group
+            </mat-icon>
+          Users</a>
+        <a mat-list-item href="#">
+          <mat-icon aria-label="material-symbols-outlined">
+            event
+            </mat-icon>
+          Calendar</a>
+        <a mat-list-item href="#">
+          <mat-icon aria-label="material-symbols-outlined">
+            lan
+            </mat-icon>
+          Projects</a>
+        <a mat-list-item href="#">
+          <mat-icon aria-label="material-symbols-outlined">
+            live_help
+            </mat-icon>
+          Help</a>
+        <a mat-list-item href="#">
+          <mat-icon aria-label="material-symbols-outlined">
+            person
+            </mat-icon>
+          {{userName}}</a>
+        <a mat-list-item href="#">
+          <mat-icon aria-label="material-symbols-outlined">
+            settings
+        </mat-icon>
+          Settings</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+         @if (isHandset$ | async) {
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+        }
+          <mat-icon aria-label="Tool Bar logout icon">logout</mat-icon>
+        
+      </mat-toolbar>
+      <ng-content></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

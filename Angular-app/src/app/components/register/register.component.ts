@@ -55,7 +55,7 @@ export class RegisterComponent {
     const userData: User = {
       firstName: posData.firstName,
       lastName: posData.lastName,
-      email: posData.email
+      email: posData.email,
     };
 
     this.UserService.saveUser(userData);

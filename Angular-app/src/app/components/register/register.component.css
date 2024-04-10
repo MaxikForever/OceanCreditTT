@@ -25,7 +25,6 @@
   font-size: 1rem;
 }
 
-
 @media (max-width: 460px) {
     mat-form-field {
       width: 300px !important;

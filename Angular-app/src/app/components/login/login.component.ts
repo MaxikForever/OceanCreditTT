@@ -18,8 +18,8 @@ export class LoginComponent {
 
   ) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required] // can add validator pattern 
+      email: ['demo@example.com', [Validators.required, Validators.email]],
+      password: ['asdfasdfdsf', Validators.required] // can add validator pattern 
     });
   }
 
@@ -41,11 +41,5 @@ export class LoginComponent {
     this.router.navigate(['home']);
   }
 
-  ngOnInit() {
-    this.loginForm = new FormGroup({
-      email: new FormControl('demo@example.com'), // Default email value
-      password: new FormControl('guWEK<\'r/-47-XG3') // Default password value
-    });
-  }
   
 }

@@ -15,7 +15,13 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { MaterialModule } from './Material.Module';
 import { GearIconComponent } from './components/gear-icon/gear-icon.component';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MainNavComponent } from './components/main-nav/main-nav.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -24,7 +30,8 @@ import { GearIconComponent } from './components/gear-icon/gear-icon.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    GearIconComponent
+    GearIconComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,13 @@ import { GearIconComponent } from './components/gear-icon/gear-icon.component';
     MatInputModule,
     ButtonModule,
     ToastModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [
     MessageService,
