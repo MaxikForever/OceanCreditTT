@@ -5,6 +5,12 @@
 
 :root {
     --blue-color: hsl(224, 100%, 58%) !important;
+    --blue-accent-color: hsl(224, 73%, 40%);
+    --blue-text-color: hsl(224,100%, 58%);
+    --gray-color:  rgb(69, 90, 100);
+
+
+    --button-padding: 16px 24px;
 }
 
 html,
@@ -14,3 +20,45 @@ body {
     margin: 0;
 }
 
+
+/* Custom button */
+
+.custom-button {
+    padding: var(--button-padding);
+    background-color: var(--blue-color) ;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+    max-width: 400px;
+    width: 100%;
+    font-weight: 700;
+  }
+
+  .custom-button:hover {
+    background-color:var(--blue-accent-color);
+
+  }
+
+
+
+  .custom-link-button {
+    display: inline-block; /* Allows the application of padding and width */
+    padding: var(--button-padding);
+    background-color: transparent; 
+    color:  var(--blue-text-color); 
+    text-align: center;
+    text-decoration: none; /* Removes underline from links */
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    max-width: 400px; /* Your requirement */
+    width: 100%;
+    font-weight: 700;
+  }
+  
+  .custom-link-button:hover {
+    background-color: rgba(41, 98, 255, 0.04); 
+  }

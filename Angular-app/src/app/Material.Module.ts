@@ -6,6 +6,8 @@ import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import {MatRadioModule} from '@angular/material/radio';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -19,6 +21,8 @@ exports: [
     MatButtonModule,
     MatFormFieldModule,
     MatRadioModule,
+    MatToolbarModule,
+    MatIconModule
     
 ]
 })
