@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,11 +10,12 @@ import { Router } from '@angular/router';
 
 export class LoginComponent {
   loginForm: FormGroup;
+  submitted = false;
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
-  
+
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -31,7 +32,20 @@ export class LoginComponent {
   }
 
   redirectToHome() {
+    this.submitted = true;
+
+    if (this.loginForm.invalid) {
+      return;
+    }
+
     this.router.navigate(['home']);
   }
 
+  ngOnInit() {
+    this.loginForm = new FormGroup({
+      email: new FormControl('demo@example.com'), // Default email value
+      password: new FormControl('guWEK<\'r/-47-XG3') // Default password value
+    });
+  }
+  
 }

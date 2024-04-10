@@ -26,16 +26,6 @@
 }
 
 
-.settings-icon {
-  height: 44px;
-  width: 44px;
-  fill: hsl(0, 0%, 46%);
-  position: absolute; 
-  top: 20px; 
-  right: 20px; 
-  padding: 10px; 
-}
-
 @media (max-width: 460px) {
     mat-form-field {
       width: 300px !important;

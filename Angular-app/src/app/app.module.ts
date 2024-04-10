@@ -14,6 +14,7 @@ import { Button, ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { MaterialModule } from './Material.Module';
+import { GearIconComponent } from './components/gear-icon/gear-icon.component';
 
 
 
@@ -22,7 +23,8 @@ import { MaterialModule } from './Material.Module';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    GearIconComponent
   ],
   imports: [
     BrowserModule,

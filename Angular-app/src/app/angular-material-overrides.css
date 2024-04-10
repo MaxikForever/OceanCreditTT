@@ -3,10 +3,39 @@
     --radio-selected-color: hsl(224, 100%, 58%);
   }
 
-/* form-fields-border-radius */
+/* form-fields */
 .mdc-text-field--outlined {
   --mdc-outlined-text-field-container-shape: 16px !important;
 }
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: hsl(199, 18%, 33%) !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: hsl(199, 18%, 33%) !important;
+}
+
+.mat-mdc-form-field-input-control.mat-mdc-form-field-input-control {
+  line-height: 23px !important;
+
+}
+
+.mdc-line-ripple {
+  display: none !important;
+}
+
+/* .mdc-text-field {
+  padding: 25px 12px 8px !important;
+} */
+
+.mdc-text-field--filled {
+  border-top-left-radius:  16px !important;
+  border-top-right-radius: 16px !important;
+  border-bottom-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
+}
+
 
 /* radio  */
 
