@@ -21,6 +21,13 @@ body {
 }
 
 
+/* logo */
+
+
+#logo {
+  max-width: 40px;
+}
+
 /* Custom button */
 
 .custom-button {

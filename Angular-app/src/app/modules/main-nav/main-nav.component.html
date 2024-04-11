@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="mt-4" >
+      <svg class="mb-2" id="logo" mat-card-sm-image xmlns="http://www.w3.org/2000/svg" height="40"
+      width="40" viewBox="0 0 24 24"
+      style="fill: none; stroke: currentcolor; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round;">
+      <path d="m 6,7 6,10"></path>
+      <path d="M 18,7 V 7"></path>
+  </svg>
+    </mat-toolbar>
+    <mat-nav-list fxLayout="column"  >
+
+      <div fxLayout="column" fxLayoutGap="20px" class="nav-bar__pages">
+        <a *ngFor="let link of pageLinks" class="rounded-list-item" mat-list-item href="#" [class.active-link]="link.isActive">
+          <mat-icon>{{ link.icon }}</mat-icon>{{ link.label }}
+        </a>
+      </div>
+
+      <div fxFlex></div> 
+
+      <div fxLayout="column" fxLayoutAlign="end" class="nav-bar__pages">
+        <a class="rounded-list-item" mat-list-item href="#"><mat-icon>person</mat-icon>{{userName}}</a>
+        <a class="rounded-list-item" mat-list-item href="#"><mat-icon>settings</mat-icon>Settings</a>
+      </div>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button *ngIf="isHandset$ | async" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div fxFlex></div> 
+      <mat-icon (click)="logOut()" aria-label="Tool Bar logout icon">logout</mat-icon>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

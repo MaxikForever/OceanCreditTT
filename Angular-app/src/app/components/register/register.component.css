@@ -6,10 +6,6 @@
   color: var(--gray-color);
 }
 
-#logo {
-  max-width: 40px;
-}
-
 .sub-title {
   font-family: Nunito, sans-serif;
   font-size: 1.125rem;

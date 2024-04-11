@@ -1,14 +1,15 @@
 :root {
-    --radio-unselected-hover-border-color: rgb(69, 90, 100);
-    --radio-selected-color: hsl(224, 100%, 58%);
-  }
+  --radio-unselected-hover-border-color: rgb(69, 90, 100);
+  --radio-selected-color: hsl(224, 100%, 58%);
+}
 
 /* form-fields */
 .mdc-text-field--outlined {
   --mdc-outlined-text-field-container-shape: 16px !important;
 }
 
-.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input {
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-text-field__input {
   color: hsl(199, 18%, 33%) !important;
 }
 
@@ -18,7 +19,6 @@
 
 .mat-mdc-form-field-input-control.mat-mdc-form-field-input-control {
   line-height: 23px !important;
-
 }
 
 .mdc-line-ripple {
@@ -30,49 +30,68 @@
 } */
 
 .mdc-text-field--filled {
-  border-top-left-radius:  16px !important;
+  border-top-left-radius: 16px !important;
   border-top-right-radius: 16px !important;
   border-bottom-left-radius: 16px !important;
   border-bottom-right-radius: 16px !important;
 }
 
-
 /* radio  */
 
 /* Unselected Radio - Hover State */
-.mdc-radio input[type="radio"]:not(:checked):hover + .mdc-radio__background .mdc-radio__outer-circle {
-    border-color: var(--radio-unselected-hover-border-color) !important;
-  }
-  
-  /* Unselected and Selected Radio - Default State */
-  .mdc-radio .mdc-radio__outer-circle {
-    border-color: var(--radio-unselected-hover-border-color) !important;
-  }
-  
-  .mdc-radio input[type="radio"]:checked + .mdc-radio__background .mdc-radio__outer-circle {
-    border-color: var(--radio-selected-color) !important;
-  }
-  
-  /* Selected Radio - Inner Circle Color (Using a CSS variable for the component) */
-  .mdc-radio {
-    --mdc-radio-selected-icon-color: var(--radio-selected-color) !important;
-  }
-  
-  .mdc-radio input[type="radio"]:checked:hover + .mdc-radio__background .mdc-radio__inner-circle {
-    border-color: var(--radio-selected-color) !important /* Replace 'yourHoverBorderColor' with the desired color */
+.mdc-radio
+  input[type="radio"]:not(:checked):hover
+  + .mdc-radio__background
+  .mdc-radio__outer-circle {
+  border-color: var(--radio-unselected-hover-border-color) !important;
 }
 
+/* Unselected and Selected Radio - Default State */
+.mdc-radio .mdc-radio__outer-circle {
+  border-color: var(--radio-unselected-hover-border-color) !important;
+}
 
+.mdc-radio
+  input[type="radio"]:checked
+  + .mdc-radio__background
+  .mdc-radio__outer-circle {
+  border-color: var(--radio-selected-color) !important;
+}
+
+/* Selected Radio - Inner Circle Color (Using a CSS variable for the component) */
+.mdc-radio {
+  --mdc-radio-selected-icon-color: var(--radio-selected-color) !important;
+}
+
+.mdc-radio
+  input[type="radio"]:checked:hover
+  + .mdc-radio__background
+  .mdc-radio__inner-circle {
+  border-color: var(
+    --radio-selected-color
+  ) !important; /* Replace 'yourHoverBorderColor' with the desired color */
+}
 
 /* buttons */
 
-  .mat-mdc-unelevated-button.mat-primary {
-    --mdc-filled-button-container-color:  var(--radio-selected-color) !important
+.mat-mdc-unelevated-button.mat-primary {
+  --mdc-filled-button-container-color: var(--radio-selected-color) !important;
 }
 
 .mdc-button {
-    --mdc-shape-small: 20px !important; /* Adjust the value as needed */
-  }
+  --mdc-shape-small: 20px !important; /* Adjust the value as needed */
+}
+
+/* mat-list-item */
+
+.mdc-list-item__primary-text {
+  color: var(--gray-color) !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
 
 
-
+.mdc-list-item.mdc-list-item--with-one-line {
+  height: 65px !important;
+  width: 250px !important;
+}

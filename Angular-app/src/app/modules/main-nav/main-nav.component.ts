@@ -15,6 +15,15 @@ import { Router } from '@angular/router';
 export class MainNavComponent {
   private breakpointObserver = inject(BreakpointObserver);
   @Input() userName!: string | undefined;
+  pageLinks = [
+    { icon: 'home', label: 'Home', isActive: true }, 
+    { icon: 'bar_chart', label: 'Dashboard', isActive: false },
+    { icon: 'group', label: 'Users', isActive: false },
+    { icon: 'event', label: 'Calendar', isActive: false },
+    { icon: 'lan', label: 'Projects', isActive: false },
+    { icon: 'live_help', label: 'Help', isActive: false }
+  ];
+
 
   constructor(
     private store: Store,
