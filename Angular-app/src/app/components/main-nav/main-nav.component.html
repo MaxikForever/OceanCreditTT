@@ -55,7 +55,7 @@
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
         }
-          <mat-icon aria-label="Tool Bar logout icon">logout</mat-icon>
+          <mat-icon (click)="logOut()" aria-label="Tool Bar logout icon">logout</mat-icon>
         
       </mat-toolbar>
       <ng-content></ng-content>

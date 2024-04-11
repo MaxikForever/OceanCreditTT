@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { saveUserData } from '../../shared/store/userData.actions';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +17,7 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private router: Router,
+    private store: Store,
 
   ) {
     this.loginForm = this.fb.group({
@@ -38,8 +41,18 @@ export class LoginComponent {
       return;
     }
 
+    const email = this.loginForm.value.email;
+    const password = this.loginForm.value.password;
+
+    this.saveUser(email, password);
+
+    console.log(email, password);
+
     this.router.navigate(['home']);
   }
 
+  saveUser(email: string, password: string) {
+    this.store.dispatch(saveUserData({email, password}));
+  }
   
 }

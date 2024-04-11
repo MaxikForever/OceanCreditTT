@@ -19,7 +19,7 @@ export class RegisterComponent {
     private fb: FormBuilder,
     private messageService: MessageService,
     private router: Router,
-    private UserService: UserService
+    private UserService: UserService,
   ) {
     this.registerForm = this.fb.group(
       {
@@ -45,7 +45,7 @@ export class RegisterComponent {
 
   submitDetails() {
 
-   this.submitted = true;
+    this.submitted = true;
 
     if (this.registerForm.invalid) {
       return;
