@@ -1,0 +1,200 @@
+/* .box {
+    background-color: gray;
+} */
+.container {
+    color: var(--gray-color);
+}
+
+.box {
+  height: 100vh;
+  padding-top: 16px;
+  padding-left: 16px;
+  
+}
+
+.box {
+    box-sizing: border-box;
+    margin: 0px;
+    flex-basis: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+
+/* welcome back section  */
+
+.welcome-back {
+    padding: 24px;
+}
+
+.username {
+    font-weight: 800;
+}
+
+.mat-headline-4, .mat-typography .mat-headline-4 {
+    margin-bottom: 0.35rem !important;
+    font-family: Nunito !important;
+    font-size: 2rem;
+}
+
+.mat-h1, .mat-headline-5, .mat-typography .mat-h1, .mat-typography .mat-headline-5, .mat-typography h1 {
+  font-weight: 300 !important;
+  font-size: 2rem;
+  font-family: Nunito !important;
+}
+
+.mat-h3, .mat-subtitle-1, .mat-typography .mat-h3, .mat-typography .mat-subtitle-1, .mat-typography h3 {
+    margin: 0px 0px 16px;
+    font-family: Nunito, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: 0px;
+    color: rgb(96, 125, 139);
+}
+
+/* svg filling   */
+
+.fill-primary {
+    fill: rgb(83, 129, 255);
+}
+ .fill-warning {
+    fill: rgb(255, 207, 51);
+}
+
+.fill-paper {
+    fill: rgb(255, 255, 255);
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+}
+
+/* card */
+
+.card {
+    background-color: rgb(41, 98, 255);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    border-radius: 16px;
+}
+
+.card .star-icon {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    font-family: Nunito, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    user-select: none;
+    color: inherit;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 24px;
+}
+
+.card .star-icon svg {
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+    transition: fill 100ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-size: 1.5rem;
+    color: rgb(41, 98, 255);
+}
+
+
+
+.mat-h5, .mat-typography .mat-h5, .mat-typography h5 {
+    margin: 0px 0px 0.35em;
+    font-family: Nunito, sans-serif;
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.334;
+    letter-spacing: 0px;
+}
+
+.mat-mdc-raised-button .mat-mdc-button-touch-target {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-family: Nunito, sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0px;
+    min-width: 64px;
+    border-radius: 16px;
+    transition: background-color 125ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 125ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 125ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 125ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    padding: 16px 24px;
+    text-transform: none;
+}
+
+
+.mat-body, .mat-body-2, .mat-typography .mat-body, .mat-typography .mat-body-2, .mat-typography {
+    margin: 0px 0px 24px;
+    font-family: Nunito, sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    letter-spacing: 0px;
+}
+
+.mat-mdc-raised-button {
+    padding: 28px 19px;
+    border-radius: 16px;
+}
+
+/* media  */
+
+@media (min-width: 960px) {
+    .box {
+      flex-basis: 50%;
+      -webkit-box-flex: 0;
+      flex-grow: 0;
+      max-width: 50%;
+    }
+  }
+
+@media (min-width: 1280px) {
+  .box {
+    flex-basis: 33.3333%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    max-width: 33.3333%;
+  }
+}
+
+

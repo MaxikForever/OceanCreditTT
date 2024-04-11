@@ -48,7 +48,7 @@ export class LoginComponent {
 
     console.log(email, password);
 
-    this.router.navigate(['home']);
+    this.router.navigate(['admin']);
   }
 
   saveUser(email: string, password: string) {

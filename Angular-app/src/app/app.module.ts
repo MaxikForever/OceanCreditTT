@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { RegisterComponent } from './components/register/register.component';
-import { AdminComponent } from './components/home/admin.component';
+import { AdminComponent } from './components/admin/admin.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -23,6 +23,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { StoreModule } from '@ngrx/store';
+import { HomeComponent } from './components/home/home.component';
+
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { StoreModule } from '@ngrx/store';
     RegisterComponent,
     AdminComponent,
     GearIconComponent,
-    MainNavComponent
+    MainNavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
