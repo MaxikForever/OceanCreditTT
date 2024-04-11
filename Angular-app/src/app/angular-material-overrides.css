@@ -95,3 +95,9 @@
   height: 65px !important;
   width: 250px !important;
 }
+
+/* typography */
+
+.mat-h3[_ngcontent-ng-c1370900420], .mat-subtitle-1[_ngcontent-ng-c1370900420], .mat-typography[_ngcontent-ng-c1370900420]   .mat-h3[_ngcontent-ng-c1370900420], .mat-typography[_ngcontent-ng-c1370900420]   .mat-subtitle-1[_ngcontent-ng-c1370900420], .mat-typography[_ngcontent-ng-c1370900420]   h3[_ngcontent-ng-c1370900420] {
+  margin: 0 !important;
+}

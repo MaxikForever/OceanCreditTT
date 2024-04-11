@@ -24,6 +24,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { StoreModule } from '@ngrx/store';
 import { HomeComponent } from './components/home/home.component';
+import { FlexLayoutServerModule } from '@angular/flex-layout/server';
+import { HttpClientModule, withFetch,provideHttpClient } from '@angular/common/http';
+
 
 
 
@@ -54,12 +57,18 @@ import { HomeComponent } from './components/home/home.component';
     MatIconModule,
     MatListModule,
     StoreModule.forRoot({}, {}),
+    FlexLayoutServerModule,
+    HttpClientModule
+
   ],
   providers: [
     MessageService,
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

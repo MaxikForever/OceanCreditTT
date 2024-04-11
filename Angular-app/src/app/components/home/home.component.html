@@ -5,13 +5,14 @@
 </div> -->
 
 <div class="container" fxLayout="row wrap">
-   
+
     <div class="box" fxFlex fxLayout="column" fxFlexFill>
 
         <div class="box-content welcome-back">
             <div class="mat-headline-4 username">Hi {{splitUserName?.[0]}},</div>
-             <div class="mat-h1">Welcome back!</div>
-            <p class="mat-subtitle-1">This page is designed to give some important information about the application. Let's make someting
+            <div class="mat-h1">Welcome back!</div>
+            <p class="mat-subtitle-1">This page is designed to give some important information about the application.
+                Let's make someting
                 together!</p>
 
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="406"
@@ -97,12 +98,11 @@
                 </path>
             </svg>
         </div>
-        
-        <div class="box-content" >
+
+        <div class="box-content">
             <div class="card">
                 <div class="star-icon">
-                    <svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-5tf6s3-MuiSvgIcon-root"
-                        focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="StarIcon">
+                    <svg class="" focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="StarIcon">
                         <path
                             d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
                         </path>
@@ -111,7 +111,7 @@
                 <div class="mat-h5">
                     Congratulations {{splitUserName?.[0]}}
                 </div>
-                
+
                 <div class="mat-body-2">
                     You have completed 75% of your profile. Your current progress is great.
                 </div>
@@ -121,6 +121,89 @@
             </div>
         </div>
     </div>
-    <div class="box"></div>
+    <div class="box">
+
+        <div class="box-content">
+            <mat-card>
+                <mat-card-content class="stats">
+
+                    <div class="stats-like-svg">
+                        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="ThumbUpIcon">
+                            <path
+                                d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div class="stats-numbers">
+                        <div class="mat-h4"> {{randomNumbers[0] | number}}</div>
+                        <div class="mat-subtitle-1">Likes</div>
+                    </div>
+
+                    <svg class="arrow-up" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                        data-testid="ArrowDropUpIcon">
+                        <path d="m7 14 5-5 5 5z"></path>
+                    </svg>
+
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+                <mat-card-content class="stats">
+
+                    <div class="stats-hearth-svg">
+                        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="FavoriteIcon"
+                            style="color: rgb(255, 255, 255);">
+                            <path
+                                d="m12 21.35-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div class="stats-numbers">
+                        <div class="mat-h4">{{randomNumbers[1] | number}}</div>
+                        <div class="mat-subtitle-1">Love</div>
+                    </div>
+
+                    <svg class="arrow-right" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                        data-testid="ArrowRightIcon">
+                        <path d="m10 17 5-5-5-5v10z"></path>
+                    </svg>
+
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card>
+                <mat-card-content class="stats">
+
+                    <div class="stats-smile-svg">
+                        <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" data-testid="EmojiEmotionsIcon"
+                            style="color: rgb(255, 255, 255);">
+                            <path
+                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM8.5 8c.83 0 1.5.67 1.5 1.5S9.33 11 8.5 11 7 10.33 7 9.5 7.67 8 8.5 8zM12 18c-2.28 0-4.22-1.66-5-4h10c-.78 2.34-2.72 4-5 4zm3.5-7c-.83 0-1.5-.67-1.5-1.5S14.67 8 15.5 8s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div class="stats-numbers">
+                        <div class="mat-h4">{{randomNumbers[2] | number}}</div>
+                        <div class="mat-subtitle-1">Smiles</div>
+                    </div>
+
+                    <svg class="arrow-down" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                        data-testid="ArrowDropDownIcon">
+                        <path d="m7 10 5 5 5-5z"></path>
+                    </svg>
+
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+
+        <div class="box-content">
+
+        </div>
+
+    </div>
     <div class="box"></div>
 </div>
