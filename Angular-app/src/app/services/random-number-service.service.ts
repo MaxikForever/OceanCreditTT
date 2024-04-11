@@ -5,11 +5,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class RandomNumberService {
-  private apiUrl = 'https://www.randomnumberapi.com/api/v1.0/random?min=30000&max=50000&count=3';
-
   constructor(private http: HttpClient) { }
 
-  getRandomNumbers() {
-    return this.http.get<number[]>(this.apiUrl);
+  getRandomNumbers(min: number, max: number, count: number = 3) {
+    const apiUrl = `https://www.randomnumberapi.com/api/v1.0/random?min=${min}&max=${max}&count=${count}`;
+    return this.http.get<number[]>(apiUrl);
   }
 }

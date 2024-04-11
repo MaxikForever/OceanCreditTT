@@ -401,6 +401,10 @@ mat-card {
   border-radius: 16px !important;
 }
 
+.mdc-list-item.mdc-list-item--with-one-line {
+  width: 100% !important;
+}
+
 /* media  */
 
 @media (min-width: 960px) {

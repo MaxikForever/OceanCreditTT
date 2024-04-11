@@ -219,10 +219,10 @@
                             Views
                         </div>
 
-                        <div class="mat-4">75%</div>
+                        <div class="mat-4">{{randomPercents[0]}}%</div>
 
                     </div>
-                    <mat-progress-bar  class="progress-bar-views"  mode="determinate" value="75"></mat-progress-bar>
+                    <mat-progress-bar  class="progress-bar-views"  mode="determinate" [value]="randomPercents[0]"></mat-progress-bar>
                 </mat-list-item>
                 <mat-list-item>
                     <div class="box-root">
@@ -230,10 +230,10 @@
                             Followers
                         </div>
 
-                        <div class="mat-4">45%</div>
+                        <div class="mat-4">{{randomPercents[1]}}%</div>
 
                     </div>
-                    <mat-progress-bar class="progress-bar-followers"  mode="determinate" value="40"></mat-progress-bar>
+                    <mat-progress-bar class="progress-bar-followers"  mode="determinate" [value]="randomPercents[1]"></mat-progress-bar>
                 </mat-list-item>
                 <mat-list-item>
                     <div class="box-root">
@@ -241,11 +241,11 @@
                             Income
                         </div>
 
-                        <div class="mat-4">25%</div>
+                        <div class="mat-4">{{randomPercents[2]}}%</div>
 
                     </div>
 
-                    <mat-progress-bar class="progress-bar-income" mode="determinate" value="40"></mat-progress-bar>
+                    <mat-progress-bar class="progress-bar-income" mode="determinate" [value]="randomPercents[2]"></mat-progress-bar>
                 </mat-list-item>
             </mat-card-content>
         </mat-card>
