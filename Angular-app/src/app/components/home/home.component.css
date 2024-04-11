@@ -339,6 +339,68 @@ mat-card {
   color: rgb(255, 61, 0);
 }
 
+.box-root {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.mat-headline-6 {
+  margin-bottom: 0px !important;
+}
+
+.mdc-list-item {
+  padding: 12px 0 12px 0 !important;
+}
+
+/* targets */
+
+/* .mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color:rgb(41, 98, 255);
+  --mdc-linear-progress-track-color: rgb(190, 207, 255);
+} */
+
+.progress-bar-views {
+  --mdc-linear-progress-active-indicator-color: rgb(41, 98, 255);
+  --mdc-linear-progress-track-color: rgb(190, 207, 255);
+}
+
+.progress-bar-followers {
+  --mdc-linear-progress-active-indicator-color: rgb(
+    255,
+    196,
+    0
+  ); /* Different color */
+  --mdc-linear-progress-track-color: rgb(255, 237, 178); /* Different color */
+}
+
+.progress-bar-income {
+  --mdc-linear-progress-active-indicator-color: rgb(
+    255,
+    61,
+    0
+  ); /* Another different color */
+  --mdc-linear-progress-track-color: rgb(
+    255,
+    196,
+    178
+  ); /* Another different color */
+}
+
+/* .css-dldqn5-MuiLinearProgress-root {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  z-index: 0;
+  border-radius: 16px;
+  height: 12px;
+  color: rgb(41, 98, 255);
+} */
+
+.mdc-linear-progress {
+  border-radius: 16px !important;
+}
+
 /* media  */
 
 @media (min-width: 960px) {

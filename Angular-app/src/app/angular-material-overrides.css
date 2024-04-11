@@ -1,6 +1,9 @@
 :root {
   --radio-unselected-hover-border-color: rgb(69, 90, 100);
   --radio-selected-color: hsl(224, 100%, 58%);
+  --mdc-linear-progress-track-height: 12px;
+  --mdc-linear-progress-active-indicator-height: 12px;
+  
 }
 
 /* form-fields */
