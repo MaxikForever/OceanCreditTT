@@ -458,6 +458,11 @@ mat-card {
 
 .dashboard-container {
   padding: 24px;
+
+}
+
+mat-card.dashboard {
+  margin-top: 40px;
 }
 
 .mat-subtitle-1.views {

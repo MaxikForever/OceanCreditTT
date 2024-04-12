@@ -26,7 +26,8 @@ import { StoreModule } from '@ngrx/store';
 import { HomeComponent } from './components/home/home.component';
 import { FlexLayoutServerModule } from '@angular/flex-layout/server';
 import { HttpClientModule, withFetch,provideHttpClient } from '@angular/common/http';
-
+import { CommonModule } from '@angular/common';
+import { ChartComponent } from './components/chart/chart.component';
 
 
 
@@ -38,7 +39,8 @@ import { HttpClientModule, withFetch,provideHttpClient } from '@angular/common/h
     AdminComponent,
     GearIconComponent,
     MainNavComponent,
-    HomeComponent
+    HomeComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ import { HttpClientModule, withFetch,provideHttpClient } from '@angular/common/h
     MatListModule,
     StoreModule.forRoot({}, {}),
     FlexLayoutServerModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
 
   ],
   providers: [
