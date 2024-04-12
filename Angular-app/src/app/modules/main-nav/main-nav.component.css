@@ -69,8 +69,8 @@ mat-icon {
   /* Add other styles as needed */
 }
 
-.sidenav-container {
-
+.logout-icon {
+  cursor: pointer;
 }
 
 /* media */

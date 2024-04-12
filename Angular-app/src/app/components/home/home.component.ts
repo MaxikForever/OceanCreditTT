@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   users: any[] = [];
   time: number[] = [];
   timeSlots: string[] = [];
-  userNumbersOnPage: number = 4;
+  userNumbersOnPage: number = 3;
 
   constructor(
     private randomNumberService: RandomNumberService,

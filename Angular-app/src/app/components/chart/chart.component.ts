@@ -35,7 +35,7 @@ export class ChartComponent implements AfterViewInit {
           {
             label: '',
             data: [2.5, 1.4, 6, 4],
-            backgroundColor: "rgba(190, 207, 255, 0.5)", 
+            backgroundColor: "rgba(190, 207, 255, 0.5)", // Adjust opacity to match screenshot
             borderColor: "rgb(41, 98, 255)",
             fill: true,
             tension: 0.3, 

@@ -1,11 +1,4 @@
-
-
-
-/* 
-@media (min-width: 960px) {
-    .chart-container  {
-        width: 500px !important;
-        height: 500px !important;
-    }
-  }
-   */
+#myChart {
+  height: auto !important;
+  width: 100% !important;
+}
