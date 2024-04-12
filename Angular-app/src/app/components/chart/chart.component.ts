@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef, Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import Chart from 'chart.js/auto'; // Ensure this import is correct for your Chart.js version
+import Chart from 'chart.js/auto';
 
 @Component({
   selector: 'app-chart',
@@ -27,37 +27,73 @@ export class ChartComponent implements AfterViewInit {
       return console.error('Unable to get canvas context');
     }
     console.log('Initializing chart with context', ctx);
-
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ["January 2019", "February 2019", "March 2019", "April 2019"],
+        labels: ["Jan", "Feb", "Mar", "Apr"],
         datasets: [
           {
-            label: 'Current Value',
-            data: [0, 20, 40, 50],
-            backgroundColor: "rgba(115, 125, 231, 0.55)",
-            borderColor: "#006ee5",
-            fill: true
+            label: '',
+            data: [2.5, 1.4, 6, 4],
+            backgroundColor: "rgba(190, 207, 255, 0.5)", 
+            borderColor: "rgb(41, 98, 255)",
+            fill: true,
+            tension: 0.3, 
+            pointRadius: 0,
+            pointHitRadius: 10, 
+            pointHoverRadius: 10,
+            pointHoverBorderWidth: 4, 
+            pointHoverBackgroundColor: "rgb(41, 98, 255)", 
+            pointHoverBorderColor: "#fff", 
           },
-          {
-            label: 'Invested Amount',
-            data: [0, 20, 40, 60, 80],
-            backgroundColor: "#442ee3",
-            borderColor: "#442ee3",
-            fill: true
-          }
         ]
       },
       options: {
         responsive: true,
+        interaction: {
+          intersect: false,
+          mode: 'index',
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            enabled: true, 
+            mode: 'index',
+            position: 'nearest',
+            callbacks: {
+              label: function(context) {
+                return `fb: ${context.parsed.y}`;
+              }
+            }
+          }
+        },
         scales: {
           y: {
-            beginAtZero: true
+            suggestedMax: 8,
+            display: false,
+            beginAtZero: false,
+          },
+          x: {
+            grid: {
+              display: false, 
+            },
+            ticks: {
+              autoSkip: false,
+            }
           }
+        },
+        elements: {
+          line: {
+            borderWidth: 6,
+          },
+          point: {
+            radius: 0, 
+          },
         }
       }
     });
-    console.log('Chart initialized', chart);
+    
   }
 }

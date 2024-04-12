@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   users: any[] = [];
   time: number[] = [];
   timeSlots: string[] = [];
-  userNumbersOnPage: number = 3;
+  userNumbersOnPage: number = 4;
 
   constructor(
     private randomNumberService: RandomNumberService,
@@ -23,11 +23,19 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
     this.splitUserName = this.userName?.split(' ');
     this.fetchRandomNumbers();
     this.fetchRandomPercents();
     this.fetchRandomUsers();
     this.fetchRandomHour();
+    // reload to solve the bug with no data loading when we are routing to the component
+    if (!localStorage.getItem('reload')) {
+      localStorage.setItem('reload', 'true');
+      location.reload();
+    } else {
+      localStorage.removeItem('reload');
+    }
   }
 
 
@@ -59,14 +67,14 @@ export class HomeComponent implements OnInit {
   fetchRandomHour() {
     this.randomNumberService.getRandomNumbers(0, 22, this.userNumbersOnPage).subscribe(hours => {
       this.time = hours;
-      this.prepareTimeSlots(); 
+      this.prepareTimeSlots();
     })
-    
+
   }
 
   prepareTimeSlots() {
     this.timeSlots = this.time.map(hour => {
-      let endHour = hour + 2; 
+      let endHour = hour + 2;
       return `${hour}:00 - ${endHour}:00`;
     });
   }
