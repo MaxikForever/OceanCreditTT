@@ -421,6 +421,7 @@ mat-card {
 
 .greater-than:hover {
   background-color: rgb(245, 245, 245);
+  cursor: pointer;
 }
 
 .mat-headline-6.meetings {
@@ -440,6 +441,43 @@ mat-card {
 .add-sign-svg {
   max-width: 24px;
   fill: rgb(33, 33, 33);
+}
+
+.stats-like-svg.dashboard svg {
+  fill: rgb(69, 90, 100) !important;
+}
+
+.stats-like-svg.dashboard {
+  background-color: white;
+}
+
+.stats.dashboard {
+  background-color: rgb(236, 239, 241);
+  border-radius: 16px;
+}
+
+.dashboard-container {
+  padding: 24px;
+}
+
+.mat-subtitle-1.views {
+  margin: 0px 0px 16px !important;
+  font-family: Nunito, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.mat-headline-4.views {
+  margin: 0px;
+  font-family: Nunito, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 /* media  */
