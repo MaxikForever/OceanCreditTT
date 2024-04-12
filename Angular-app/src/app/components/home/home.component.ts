@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { RandomNumberService } from '../../services/random-number-service.service';
+import { RandomUserService } from '../../services/random-user.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,16 +12,22 @@ export class HomeComponent implements OnInit {
   splitUserName: string[] | undefined;
   randomNumbers: number[] = [];
   randomPercents: number[] = [];
+  users: any[] = [];
+  time: number[] = [];
+  timeSlots: string[] = [];
+  userNumbersOnPage: number = 3;
 
-  constructor(private randomNumberService: RandomNumberService) {
-
-
-  }
+  constructor(
+    private randomNumberService: RandomNumberService,
+    private randomUserService: RandomUserService
+  ) { }
 
   ngOnInit() {
     this.splitUserName = this.userName?.split(' ');
     this.fetchRandomNumbers();
     this.fetchRandomPercents();
+    this.fetchRandomUsers();
+    this.fetchRandomHour();
   }
 
 
@@ -40,5 +47,30 @@ export class HomeComponent implements OnInit {
     });
 
   }
+
+  // currently need only 3 users
+  fetchRandomUsers() {
+    this.randomUserService.getRandomUsers(this.userNumbersOnPage).subscribe(users => {
+      this.users = users.map(user => user.results[0]);
+
+    });
+  }
+
+  fetchRandomHour() {
+    this.randomNumberService.getRandomNumbers(0, 22, this.userNumbersOnPage).subscribe(hours => {
+      this.time = hours;
+      this.prepareTimeSlots(); 
+    })
+    
+  }
+
+  prepareTimeSlots() {
+    this.timeSlots = this.time.map(hour => {
+      let endHour = hour + 2; 
+      return `${hour}:00 - ${endHour}:00`;
+    });
+  }
+
+
 
 }

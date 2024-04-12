@@ -206,48 +206,95 @@
 
     </div>
     <div class="box">
-        <mat-card>
-            <mat-card-header>
-                <div class="mat-headline-6">
-                    Targets
-                </div>
-            </mat-card-header>
-            <mat-card-content fxLayout="column">
-                <mat-list-item>
-                    <div class="box-root">
-                        <div class="mat-4">
-                            Views
+        <div class="box-content">
+            <mat-card>
+                <mat-card-header>
+                    <div class="mat-headline-6">
+                        Targets
+                    </div>
+                </mat-card-header>
+                <mat-card-content fxLayout="column">
+                    <mat-list-item>
+                        <div class="box-root">
+                            <div class="mat-4">
+                                Views
+                            </div>
+
+                            <div class="mat-4">{{randomPercents[0]}}%</div>
+
+                        </div>
+                        <mat-progress-bar class="progress-bar-views" mode="determinate"
+                            [value]="randomPercents[0]"></mat-progress-bar>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <div class="box-root">
+                            <div class="mat-4">
+                                Followers
+                            </div>
+
+                            <div class="mat-4">{{randomPercents[1]}}%</div>
+
+                        </div>
+                        <mat-progress-bar class="progress-bar-followers" mode="determinate"
+                            [value]="randomPercents[1]"></mat-progress-bar>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <div class="box-root">
+                            <div class="mat-4">
+                                Income
+                            </div>
+
+                            <div class="mat-4">{{randomPercents[2]}}%</div>
+
                         </div>
 
-                        <div class="mat-4">{{randomPercents[0]}}%</div>
+                        <mat-progress-bar class="progress-bar-income" mode="determinate"
+                            [value]="randomPercents[2]"></mat-progress-bar>
+                    </mat-list-item>
+                </mat-card-content>
+            </mat-card>
+        </div>
 
-                    </div>
-                    <mat-progress-bar  class="progress-bar-views"  mode="determinate" [value]="randomPercents[0]"></mat-progress-bar>
-                </mat-list-item>
-                <mat-list-item>
-                    <div class="box-root">
-                        <div class="mat-4">
-                            Followers
+        <div class="box-content">
+
+            <div class="mat-headline-6 meetings">
+                Meetings
+            </div>
+
+
+
+            <div *ngFor="let user of users;  let i = index">
+                <mat-card>
+                    <mat-card-content class="stats">
+
+                        <div class="stats-like-svg">
+
+                            <img [src]="user.picture.thumbnail" alt="">
                         </div>
 
-                        <div class="mat-4">{{randomPercents[1]}}%</div>
-
-                    </div>
-                    <mat-progress-bar class="progress-bar-followers"  mode="determinate" [value]="randomPercents[1]"></mat-progress-bar>
-                </mat-list-item>
-                <mat-list-item>
-                    <div class="box-root">
-                        <div class="mat-4">
-                            Income
+                        <div class="stats-numbers">
+                            <div class="mat-h4">{{user.name.first}} {{user.name.last}}</div>
+                            <div class="mat-subtitle-1">{{ timeSlots[i] }}</div>
                         </div>
 
-                        <div class="mat-4">{{randomPercents[2]}}%</div>
+                        <svg class="greater-than" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                            data-testid="ChevronRightIcon">
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
 
-                    </div>
+                    </mat-card-content>
+                </mat-card>
 
-                    <mat-progress-bar class="progress-bar-income" mode="determinate" [value]="randomPercents[2]"></mat-progress-bar>
-                </mat-list-item>
-            </mat-card-content>
-        </mat-card>
+
+            </div>
+            <button class="custom-button" type="submit"><span>
+                    <svg class="add-sign-svg" focusable="false"
+                        viewBox="0 0 24 24" aria-hidden="true" data-testid="AddIcon">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+                    </svg>
+                </span> </button>
+
+        </div>
+
     </div>
 </div>

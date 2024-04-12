@@ -347,6 +347,7 @@ mat-card {
 
 .mat-headline-6 {
   margin-bottom: 0px !important;
+  font-size: 1.125rem;
 }
 
 .mdc-list-item {
@@ -405,6 +406,42 @@ mat-card {
   width: 100% !important;
 }
 
+.greater-than {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 100ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  color: rgb(117, 117, 117) !important;
+  border-radius: 50%;
+}
+
+.greater-than:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.mat-headline-6.meetings {
+  margin-bottom: 24px !important;
+}
+
+.custom-button {
+  background-color: white;
+  padding: 12px 18px;
+  min-width: 100%;
+}
+
+.custom-button:hover {
+  background-color: rgb(178, 178, 178);
+}
+
+.add-sign-svg {
+  max-width: 24px;
+  fill: rgb(33, 33, 33);
+}
+
 /* media  */
 
 @media (min-width: 960px) {
@@ -422,5 +459,14 @@ mat-card {
     -webkit-box-flex: 0;
     flex-grow: 0;
     max-width: 33.3333%;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 10px;
+  }
+  .box {
+    padding-left: 0;
   }
 }
